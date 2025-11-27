@@ -29,7 +29,7 @@ jobs:
           context: ./forumappbe
           file: ./forumappbe/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-backend-2300031163:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}docker-backend:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -37,4 +37,4 @@ jobs:
           context: ./forumapp
           file: ./forumapp/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-frontend-2300031163:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}docker-frontend:latest
